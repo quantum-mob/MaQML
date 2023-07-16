@@ -1,0 +1,1501 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     54053,       1493]
+NotebookOptionsPosition[     47152,       1344]
+NotebookOutlinePosition[     47896,       1369]
+CellTagsIndexPosition[     47816,       1364]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["AmplitudeEmbedding", "ObjectName",
+ CellID->2131671015,ExpressionUUID->"d0ff3e85-89c5-462a-a17d-bfd059cd1b39"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"47210ab6-501b-4b45-8b27-72e30b21bace"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["AmplitudeEmbedding",
+    BaseStyle->"Link",
+    ButtonData->"paclet:MaQML/ref/AmplitudeEmbedding"], "[", 
+   RowBox[{
+    StyleBox["data", "TI"], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      SubscriptBox[
+       StyleBox["s", "TI"], 
+       StyleBox["1", "TR"]], ",", 
+      SubscriptBox[
+       StyleBox["s", "TI"], 
+       StyleBox["2", "TR"]], ",", 
+      StyleBox["\[Ellipsis]", "TR"]}], "}"}]}], "]"}]], "InlineFormula",
+  ExpressionUUID->"8802833a-495c-48ae-93c5-896cc82bcb08"],
+ " \[LineSeparator]returns a quantum state the amplitudes of which encode ",
+ Cell[BoxData[
+  StyleBox["data", "TI"]], "InlineFormula",ExpressionUUID->
+  "bc8935be-178c-4715-88e0-2f4ee4cb79cb"],
+ " on qubits ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox[
+    StyleBox["s", "TI"], 
+    StyleBox["1", "TR"]], ",", 
+   SubscriptBox[
+    StyleBox["s", "TI"], 
+    StyleBox["2", "TR"]], ",", 
+   StyleBox["\[Ellipsis]", "TR"]}]], "InlineFormula",ExpressionUUID->
+  "81d39bc2-70c1-45bf-a04e-5b976f6e00bb"],
+ "."
+}], "Usage",
+ CellChangeTimes->{{3.898501049696302*^9, 3.898501120857553*^9}},
+ CellID->525066204,ExpressionUUID->"85d40921-e07a-4918-9fa6-72fef79fa534"],
+
+Cell["XXXX", "Notes",
+ CellID->777385105,ExpressionUUID->"34fd5d24-eaf8-4449-bec6-3a4be2e96e20"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "93bdb13a-94a0-4808-8f59-943b2aecb99c"]
+}], "SeeAlsoSection",
+ CellID->220951387,ExpressionUUID->"e090764a-a79b-41e6-8882-0afe192727b1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["AmplitudeEmbeddingGate",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaQML/ref/AmplitudeEmbeddingGate"]], 
+  "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "663bc35b-8228-474b-9cdd-ccc0ca5d5b1e"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["UniformlyControlledGate",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Q3/ref/UniformlyControlledGate"]], 
+  "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "b88d585c-6ad7-4ad5-a9e6-88ddc924bf67"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["BasisEmbedding",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaQML/ref/BasisEmbedding"]], "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "0310d7ad-235b-43bf-8692-d1a0d79013f0"],
+ Cell[BoxData[
+  RowBox[{
+  Cell[TextData[StyleBox[
+   " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
+    "e723b122-805b-476e-9657-5fbb5eddba36"], 
+   DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
+    "23b6546a-0abb-4289-8296-a7a0e52f1eb3", 
+     "bacdd146-6252-4aec-b2d9-37ab61971c81"], $CellContext`cellobj$$ = 
+    CellObject[
+    "2143cbf3-99ef-40e4-8a73-e96908fae305", 
+     "faa1b710-38e9-479b-8d80-0c82dd4c7b6e"]}, 
+    TemplateBox[{
+      GraphicsBox[{{
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         CircleBox[{0, 0}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{0, 0.62}, {0, -0.62}}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{-0.62, 0}, {0.62, 0}}]}}, 
+       ImagePadding -> {{1., 1.}, {2.4, 1.}}, ImageSize -> 16, 
+       PlotRange -> {{-1.06, 1.06}, {-1.06, 1.06}}, 
+       BaselinePosition -> (Center -> 
+        Center)], $CellContext`nbobj$$, $CellContext`cellobj$$},
+     "InlineListingAddButton"],
+    Initialization:>($CellContext`nbobj$$ = 
+      EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
+  "InlineListingAddButton",ExpressionUUID->
+  "2143cbf3-99ef-40e4-8a73-e96908fae305"]
+}], "SeeAlso",
+ CellChangeTimes->{{3.8985018709371758`*^9, 3.898501890853402*^9}},
+ CellID->530735646,ExpressionUUID->"98a98047-a248-4f09-8fa5-7b4da415e3b7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "664078e1-f53a-4a4e-affd-300cd9200738"]
+}], "TechNotesSection",
+ CellID->1574416331,ExpressionUUID->"60f4333b-0be7-494f-bd90-ebc9446fd539"],
+
+Cell["XXXX", "Tutorials",
+ CellID->2069260430,ExpressionUUID->"c21ba23f-ab2e-4cdc-ba8b-380b02f5d921"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellID->1709867492,ExpressionUUID->"f92a5dd5-d4de-4fa9-96fb-75153a31235a"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->116773890,ExpressionUUID->"df153f15-9ae7-4f7b-bc21-83c493f1493a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "ab1a612f-3c1c-4e2c-8ef3-9f045194b939"]
+}], "RelatedLinksSection",
+ CellID->1966199519,ExpressionUUID->"022bae39-90e4-4631-9d56-5b8cc1cfec88"],
+
+Cell[TextData[ButtonBox["MaQML",
+ BaseStyle->"Link",
+ ButtonData->"paclet:MaQML/guide/MaQML"]], "RelatedLinks",
+ CellChangeTimes->{{3.898501904375193*^9, 3.898501906275703*^9}},
+ CellID->436955797,ExpressionUUID->"bed44aac-1fe2-42c9-b4eb-84a20d549d97"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "b3ec0fd6-c4d8-4b35-9196-359a6c2dd0ac"]
+}], "ExamplesInitializationSection",
+ CellID->1669491086,ExpressionUUID->"88a11ad1-babc-453b-86c5-94c653582529"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<MaQML`\>\"", "]"}]], "ExampleInitialization",
+ CellChangeTimes->{{3.898501170164184*^9, 3.898501170921256*^9}},
+ CellID->115350700,ExpressionUUID->"3b8115ac-b0c3-4baa-889d-bad24e11ac04"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->1668965306,ExpressionUUID->"4b2f909a-83b4-40c6-84d9-5eba0f2ab55f"],
+
+Cell[BoxData[{
+ RowBox[{"Let", "[", 
+  RowBox[{"Qubit", ",", "S"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Let", "[", 
+  RowBox[{"Real", ",", "a"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8982470098750353`*^9, 3.898247037069471*^9}},
+ CellLabel->"In[53]:=",
+ CellID->724105761,ExpressionUUID->"2e3d7586-0080-43f7-a103-431093ad9522"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$n", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"kk", "=", 
+   RowBox[{"Range", "[", "$n", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"SS", "=", 
+  RowBox[{"S", "[", 
+   RowBox[{"kk", ",", "$"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"aa", "=", 
+  RowBox[{"a", "[", 
+   RowBox[{"Range", "@", 
+    RowBox[{"Power", "[", 
+     RowBox[{"2", ",", "$n"}], "]"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.898245301677046*^9, 3.898245302555593*^9}, {
+  3.898245455183543*^9, 3.898245455257976*^9}, {3.8982470062739143`*^9, 
+  3.898247054310224*^9}},
+ CellLabel->"In[55]:=",
+ CellID->255697578,ExpressionUUID->"f671b874-87fa-45b0-b2fa-20101004ff1a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["S", 
+     TemplateBox[{",", "\",\"", "1"},
+      "RowWithSeparators"]],
+    $CellContext`S[1, Q3`$]], ",", 
+   InterpretationBox[
+    SubscriptBox["S", 
+     TemplateBox[{",", "\",\"", "2"},
+      "RowWithSeparators"]],
+    $CellContext`S[2, Q3`$]], ",", 
+   InterpretationBox[
+    SubscriptBox["S", 
+     TemplateBox[{",", "\",\"", "3"},
+      "RowWithSeparators"]],
+    $CellContext`S[3, Q3`$]], ",", 
+   InterpretationBox[
+    SubscriptBox["S", 
+     TemplateBox[{",", "\",\"", "4"},
+      "RowWithSeparators"]],
+    $CellContext`S[4, Q3`$]]}], "}"}]], "Output",
+ CellChangeTimes->{3.898352942474882*^9, 3.898498714870101*^9},
+ CellLabel->"Out[57]=",
+ CellID->2107193300,ExpressionUUID->"27236c25-6cde-4cb7-ae5c-467f7cc35185"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "1"},
+      "RowWithSeparators"]],
+    $CellContext`a[1]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "2"},
+      "RowWithSeparators"]],
+    $CellContext`a[2]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "3"},
+      "RowWithSeparators"]],
+    $CellContext`a[3]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "4"},
+      "RowWithSeparators"]],
+    $CellContext`a[4]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "5"},
+      "RowWithSeparators"]],
+    $CellContext`a[5]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "6"},
+      "RowWithSeparators"]],
+    $CellContext`a[6]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "7"},
+      "RowWithSeparators"]],
+    $CellContext`a[7]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "8"},
+      "RowWithSeparators"]],
+    $CellContext`a[8]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "9"},
+      "RowWithSeparators"]],
+    $CellContext`a[9]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "10"},
+      "RowWithSeparators"]],
+    $CellContext`a[10]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "11"},
+      "RowWithSeparators"]],
+    $CellContext`a[11]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "12"},
+      "RowWithSeparators"]],
+    $CellContext`a[12]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "13"},
+      "RowWithSeparators"]],
+    $CellContext`a[13]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "14"},
+      "RowWithSeparators"]],
+    $CellContext`a[14]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "15"},
+      "RowWithSeparators"]],
+    $CellContext`a[15]], ",", 
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "16"},
+      "RowWithSeparators"]],
+    $CellContext`a[16]]}], "}"}]], "Output",
+ CellChangeTimes->{3.898352942474882*^9, 3.8984987148717318`*^9},
+ CellLabel->"Out[58]=",
+ CellID->1444970423,ExpressionUUID->"01c859b0-cad9-4f94-89e7-41c1e3ba0e17"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AmplitudeEmbedding", "[", 
+  RowBox[{"aa", ",", "SS"}], "]"}]], "Input",
+ CellChangeTimes->{{3.898246979622871*^9, 3.898246990017509*^9}},
+ CellLabel->"In[59]:=",
+ CellID->394415799,ExpressionUUID->"9705bd32-6e3c-41e4-af69-3a0abe8e2069"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "1"},
+      "RowWithSeparators"]],
+    $CellContext`a[1]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 0, $CellContext`S[2, Q3`$] -> 
+      0, $CellContext`S[3, Q3`$] -> 0, $CellContext`S[4, Q3`$] -> 0|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "2"},
+      "RowWithSeparators"]],
+    $CellContext`a[2]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 0, $CellContext`S[2, Q3`$] -> 
+      0, $CellContext`S[3, Q3`$] -> 0, $CellContext`S[4, Q3`$] -> 1|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "3"},
+      "RowWithSeparators"]],
+    $CellContext`a[3]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 0, $CellContext`S[2, Q3`$] -> 
+      0, $CellContext`S[3, Q3`$] -> 1, $CellContext`S[4, Q3`$] -> 0|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "4"},
+      "RowWithSeparators"]],
+    $CellContext`a[4]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 0, $CellContext`S[2, Q3`$] -> 
+      0, $CellContext`S[3, Q3`$] -> 1, $CellContext`S[4, Q3`$] -> 1|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "5"},
+      "RowWithSeparators"]],
+    $CellContext`a[5]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 0, $CellContext`S[2, Q3`$] -> 
+      1, $CellContext`S[3, Q3`$] -> 0, $CellContext`S[4, Q3`$] -> 0|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "6"},
+      "RowWithSeparators"]],
+    $CellContext`a[6]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 0, $CellContext`S[2, Q3`$] -> 
+      1, $CellContext`S[3, Q3`$] -> 0, $CellContext`S[4, Q3`$] -> 1|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "7"},
+      "RowWithSeparators"]],
+    $CellContext`a[7]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 0, $CellContext`S[2, Q3`$] -> 
+      1, $CellContext`S[3, Q3`$] -> 1, $CellContext`S[4, Q3`$] -> 0|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "8"},
+      "RowWithSeparators"]],
+    $CellContext`a[8]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 0, $CellContext`S[2, Q3`$] -> 
+      1, $CellContext`S[3, Q3`$] -> 1, $CellContext`S[4, Q3`$] -> 1|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "9"},
+      "RowWithSeparators"]],
+    $CellContext`a[9]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 1, $CellContext`S[2, Q3`$] -> 
+      0, $CellContext`S[3, Q3`$] -> 0, $CellContext`S[4, Q3`$] -> 0|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "10"},
+      "RowWithSeparators"]],
+    $CellContext`a[10]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 1, $CellContext`S[2, Q3`$] -> 
+      0, $CellContext`S[3, Q3`$] -> 0, $CellContext`S[4, Q3`$] -> 1|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "11"},
+      "RowWithSeparators"]],
+    $CellContext`a[11]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 1, $CellContext`S[2, Q3`$] -> 
+      0, $CellContext`S[3, Q3`$] -> 1, $CellContext`S[4, Q3`$] -> 0|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "12"},
+      "RowWithSeparators"]],
+    $CellContext`a[12]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 1, $CellContext`S[2, Q3`$] -> 
+      0, $CellContext`S[3, Q3`$] -> 1, $CellContext`S[4, Q3`$] -> 1|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "13"},
+      "RowWithSeparators"]],
+    $CellContext`a[13]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 1, $CellContext`S[2, Q3`$] -> 
+      1, $CellContext`S[3, Q3`$] -> 0, $CellContext`S[4, Q3`$] -> 0|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "14"},
+      "RowWithSeparators"]],
+    $CellContext`a[14]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 1, $CellContext`S[2, Q3`$] -> 
+      1, $CellContext`S[3, Q3`$] -> 0, $CellContext`S[4, Q3`$] -> 1|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "15"},
+      "RowWithSeparators"]],
+    $CellContext`a[15]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["0", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 1, $CellContext`S[2, Q3`$] -> 
+      1, $CellContext`S[3, Q3`$] -> 1, $CellContext`S[4, Q3`$] -> 0|>]]}], 
+  "+", 
+  RowBox[{
+   InterpretationBox[
+    SubscriptBox["a", 
+     TemplateBox[{",", "\",\"", "16"},
+      "RowWithSeparators"]],
+    $CellContext`a[16]], " ", 
+   InterpretationBox[
+    TagBox[
+     TemplateBox[{
+       TemplateBox[{"\[VeryThinSpace]", "\"\[VeryThinSpace]\"", 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "1"}, "RowWithSeparators"]], 
+             $CellContext`S[1, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "2"}, "RowWithSeparators"]], 
+             $CellContext`S[2, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "3"}, "RowWithSeparators"]], 
+             $CellContext`S[3, Q3`$]]}, "RowWithSeparators"]], 
+         SubscriptBox["1", 
+          TemplateBox[{",", "\",\"", 
+            InterpretationBox[
+             SubscriptBox["S", 
+              TemplateBox[{",", "\",\"", "4"}, "RowWithSeparators"]], 
+             $CellContext`S[4, Q3`$]]}, "RowWithSeparators"]]}, 
+        "RowWithSeparators"]},
+      "Ket"],
+     DisplayForm],
+    Ket[<|$CellContext`S[1, Q3`$] -> 1, $CellContext`S[2, Q3`$] -> 
+      1, $CellContext`S[3, Q3`$] -> 1, $CellContext`S[4, Q3`$] -> 
+      1|>]]}]}]], "Output",
+ CellChangeTimes->{3.8983529432859173`*^9, 3.898498715546129*^9},
+ CellLabel->"Out[59]=",
+ CellID->867591090,ExpressionUUID->"99877676-9426-4472-b375-7343e61cc3da"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"op", "=", 
+  RowBox[{"AmplitudeEmbeddingGate", "[", 
+   RowBox[{"aa", ",", "SS"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.898352963524149*^9, 3.8983529718846207`*^9}},
+ CellLabel->"In[60]:=",
+ CellID->897029418,ExpressionUUID->"4f6b7af4-e26b-4953-8a4f-dfa91b74bd13"],
+
+Cell[BoxData[
+ RowBox[{"AmplitudeEmbeddingGate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "1"},
+        "RowWithSeparators"]],
+      $CellContext`a[1]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "2"},
+        "RowWithSeparators"]],
+      $CellContext`a[2]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "3"},
+        "RowWithSeparators"]],
+      $CellContext`a[3]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "4"},
+        "RowWithSeparators"]],
+      $CellContext`a[4]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "5"},
+        "RowWithSeparators"]],
+      $CellContext`a[5]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "6"},
+        "RowWithSeparators"]],
+      $CellContext`a[6]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "7"},
+        "RowWithSeparators"]],
+      $CellContext`a[7]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "8"},
+        "RowWithSeparators"]],
+      $CellContext`a[8]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "9"},
+        "RowWithSeparators"]],
+      $CellContext`a[9]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "10"},
+        "RowWithSeparators"]],
+      $CellContext`a[10]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "11"},
+        "RowWithSeparators"]],
+      $CellContext`a[11]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "12"},
+        "RowWithSeparators"]],
+      $CellContext`a[12]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "13"},
+        "RowWithSeparators"]],
+      $CellContext`a[13]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "14"},
+        "RowWithSeparators"]],
+      $CellContext`a[14]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "15"},
+        "RowWithSeparators"]],
+      $CellContext`a[15]], ",", 
+     InterpretationBox[
+      SubscriptBox["a", 
+       TemplateBox[{",", "\",\"", "16"},
+        "RowWithSeparators"]],
+      $CellContext`a[16]]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     InterpretationBox[
+      SubscriptBox["S", 
+       TemplateBox[{",", "\",\"", "1"},
+        "RowWithSeparators"]],
+      $CellContext`S[1, Q3`$]], ",", 
+     InterpretationBox[
+      SubscriptBox["S", 
+       TemplateBox[{",", "\",\"", "2"},
+        "RowWithSeparators"]],
+      $CellContext`S[2, Q3`$]], ",", 
+     InterpretationBox[
+      SubscriptBox["S", 
+       TemplateBox[{",", "\",\"", "3"},
+        "RowWithSeparators"]],
+      $CellContext`S[3, Q3`$]], ",", 
+     InterpretationBox[
+      SubscriptBox["S", 
+       TemplateBox[{",", "\",\"", "4"},
+        "RowWithSeparators"]],
+      $CellContext`S[4, Q3`$]]}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.8983529722313128`*^9, 3.898353042555352*^9, 
+  3.898498716887926*^9},
+ CellLabel->"Out[60]=",
+ CellID->478271824,ExpressionUUID->"b4be3e2a-963c-4851-8a84-c5645dc70f6a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "c53d8be5-4fc6-479b-8682-f42b6e27d017"]
+}], "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->2015984475,ExpressionUUID->"749c7818-c593-4dd9-85fe-294d5eef9409"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "d03ee5d8-0455-469e-bb29-dfb87c937d55"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1801572606,ExpressionUUID->"f33675b5-5d47-4843-b795-3e9af468bd26"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "d0c532dd-e364-4391-8e33-b654c91f2fc6"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1658849989,ExpressionUUID->"21f2883c-fffe-4ab7-92f8-d42e2636c177"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "45b23ea2-e49d-4f9b-87d9-3e4578584abe"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1659059769,ExpressionUUID->"3cdf4e37-7ef8-4693-ac3d-7f3cc1ec7fa8"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "f3015446-f3aa-44e9-b516-728626ddab6e"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->889864935,ExpressionUUID->"f5b3b3b9-b55d-4405-a3ef-2d93d8cc3971"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "1bf632ed-54ba-4828-bf97-5f0d71fb112a"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->883844837,ExpressionUUID->"b0b637bd-899e-48a2-9420-06e10ee6a686"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "ea9d8a22-7e6e-4f0d-8fda-4cd73690b8eb"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->635789160,ExpressionUUID->"9e014c01-a2bb-468b-8721-f22f6aa4040e"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "6345d604-c577-4de8-9974-d04a2f37eeaf"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1977268295,ExpressionUUID->"c4759f82-192d-4032-b1ed-5b28f3f35033"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "13dc1653-afc3-4043-8ed2-1a95e3a16363"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1786280387,ExpressionUUID->"58d056a5-485a-4595-8a94-9e8cb17f4f13"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "659bc4d1-391a-41bd-a7c7-3316ad02dbb1"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->193079249,ExpressionUUID->"ddbbd970-b519-4042-bb37-37fc3ab47958"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "090f99fe-70db-48a1-85cc-7abaf7ba6683"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->235147326,ExpressionUUID->"c0d0ce3d-a16d-4683-8d47-a2fcb51c6274"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->751197602,ExpressionUUID->"d7e05199-9bbd-435a-92a9-615eb8d512a9"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["13.3", "HistoryData",
+  CellTags->"New",ExpressionUUID->"83315209-2aec-4c4b-8b33-6b7bb1a2a81b"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"64fbfb17-3dc6-41da-961a-46b1f61530ff"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->
+  "35c780b0-7ad8-4040-b96e-65fac3c0f539"]
+}], "History",
+ CellChangeTimes->{{3.864923683926749*^9, 3.864923685610183*^9}, {
+  3.898501182285758*^9, 3.8985011880376577`*^9}},
+ CellID->321736101,ExpressionUUID->"f6f32d03-8314-4695-9650-f83c39fc5ea2"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "dcd6ca4b-a141-4a4c-98f3-0801e284bb22"]
+}], "CategorizationSection",
+ CellID->54826361,ExpressionUUID->"d38c3096-2654-4469-b4d8-fcb67e20f06f"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->196164764,ExpressionUUID->"71c416db-c1c5-4f1d-a79e-1c5f1f093337"],
+
+Cell["MaQML", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->553790403,ExpressionUUID->"719bf217-6260-4777-a560-28676b58cbf4"],
+
+Cell["MaQML`", "Categorization",
+ CellLabel->"Context",
+ CellID->361177123,ExpressionUUID->"b73761fa-2cce-4e6a-8673-cb47ee5f6274"],
+
+Cell["MaQML/ref/AmplitudeEmbedding", "Categorization",
+ CellLabel->"URI",
+ CellID->1515119839,ExpressionUUID->"5aee3490-0aee-4b40-a968-88961a51fd35"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1905531594,ExpressionUUID->"b13509c6-e888-414b-9b2b-cf0e92294c4c"],
+
+Cell["XXXX", "Keywords",
+ CellID->845872647,ExpressionUUID->"3e5c5416-b61e-44a6-b0c2-d180a10a224e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->239834989,ExpressionUUID->"56848f82-fbe9-496d-9e27-86aae4e22d73"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->79854704,ExpressionUUID->"29229c84-82d0-4ca5-8fd4-cafd5773ed76"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->2088214400,ExpressionUUID->"8967563d-f1b8-4c91-87cf-bdab7516862a"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->294177879,ExpressionUUID->"fd6a5899-e6e4-4f5c-a8dc-77db5b2f3288"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->740256959,ExpressionUUID->"38af02ec-e372-49c6-a3e8-45cb60c05ba0"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{Automatic, 245}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "MaQML"|>,
+FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (June 3, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"23b6546a-0abb-4289-8296-a7a0e52f1eb3"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[41279, 1168, 488, 13, 58, "ExtendedExamplesSection",ExpressionUUID->"749c7818-c593-4dd9-85fe-294d5eef9409",
+   CellTags->"ExtendedExamples",
+   CellID->2015984475]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 47620, 1357}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 116, 1, 74, "ObjectName",ExpressionUUID->"d0ff3e85-89c5-462a-a17d-bfd059cd1b39",
+ CellID->2131671015],
+Cell[699, 25, 1278, 37, 80, "Usage",ExpressionUUID->"85d40921-e07a-4918-9fa6-72fef79fa534",
+ CellID->525066204],
+Cell[1980, 64, 96, 1, 27, "Notes",ExpressionUUID->"34fd5d24-eaf8-4449-bec6-3a4be2e96e20",
+ CellID->777385105]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2113, 70, 458, 13, 40, "SeeAlsoSection",ExpressionUUID->"e090764a-a79b-41e6-8882-0afe192727b1",
+ CellID->220951387],
+Cell[2574, 85, 2409, 59, 23, "SeeAlso",ExpressionUUID->"98a98047-a248-4f09-8fa5-7b4da415e3b7",
+ CellID->530735646]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5020, 149, 436, 12, 41, "TechNotesSection",ExpressionUUID->"60f4333b-0be7-494f-bd90-ebc9446fd539",
+ CellID->1574416331],
+Cell[5459, 163, 101, 1, 19, "Tutorials",ExpressionUUID->"c21ba23f-ab2e-4cdc-ba8b-380b02f5d921",
+ CellID->2069260430]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5597, 169, 118, 1, 40, "MoreAboutSection",ExpressionUUID->"f92a5dd5-d4de-4fa9-96fb-75153a31235a",
+ CellID->1709867492],
+Cell[5718, 172, 100, 1, 19, "MoreAbout",ExpressionUUID->"df153f15-9ae7-4f7b-bc21-83c493f1493a",
+ CellID->116773890]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5855, 178, 473, 13, 40, "RelatedLinksSection",ExpressionUUID->"022bae39-90e4-4631-9d56-5b8cc1cfec88",
+ CellID->1966199519],
+Cell[6331, 193, 252, 4, 19, "RelatedLinks",ExpressionUUID->"bed44aac-1fe2-42c9-b4eb-84a20d549d97",
+ CellID->436955797]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6620, 202, 531, 14, 70, "ExamplesInitializationSection",ExpressionUUID->"88a11ad1-babc-453b-86c5-94c653582529",
+ CellID->1669491086],
+Cell[7154, 218, 228, 3, 47, "ExampleInitialization",ExpressionUUID->"3b8115ac-b0c3-4baa-889d-bad24e11ac04",
+ CellID->115350700]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7419, 226, 443, 12, 73, "PrimaryExamplesSection",ExpressionUUID->"4b2f909a-83b4-40c6-84d9-5eba0f2ab55f",
+ CellID->1668965306],
+Cell[7865, 240, 335, 7, 47, "Input",ExpressionUUID->"2e3d7586-0080-43f7-a103-431093ad9522",
+ CellID->724105761],
+Cell[CellGroupData[{
+Cell[8225, 251, 710, 18, 85, "Input",ExpressionUUID->"f671b874-87fa-45b0-b2fa-20101004ff1a",
+ CellID->255697578],
+Cell[8938, 271, 809, 25, 26, "Output",ExpressionUUID->"27236c25-6cde-4cb7-ae5c-467f7cc35185",
+ CellID->2107193300],
+Cell[9750, 298, 2505, 85, 26, "Output",ExpressionUUID->"01c859b0-cad9-4f94-89e7-41c1e3ba0e17",
+ CellID->1444970423]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12292, 388, 261, 5, 27, "Input",ExpressionUUID->"9705bd32-6e3c-41e4-af69-3a0abe8e2069",
+ CellID->394415799],
+Cell[12556, 395, 24917, 644, 99, "Output",ExpressionUUID->"99877676-9426-4472-b375-7343e61cc3da",
+ CellID->867591090]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37510, 1044, 292, 6, 27, "Input",ExpressionUUID->"4f6b7af4-e26b-4953-8a4f-dfa91b74bd13",
+ CellID->897029418],
+Cell[37805, 1052, 3425, 110, 46, "Output",ExpressionUUID->"b4be3e2a-963c-4851-8a84-c5645dc70f6a",
+ CellID->478271824]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41279, 1168, 488, 13, 58, "ExtendedExamplesSection",ExpressionUUID->"749c7818-c593-4dd9-85fe-294d5eef9409",
+ CellTags->"ExtendedExamples",
+ CellID->2015984475],
+Cell[41770, 1183, 242, 5, 35, "ExampleSection",ExpressionUUID->"f33675b5-5d47-4843-b795-3e9af468bd26",
+ CellID->1801572606],
+Cell[42015, 1190, 265, 5, 23, "ExampleSection",ExpressionUUID->"21f2883c-fffe-4ab7-92f8-d42e2636c177",
+ CellID->1658849989],
+Cell[CellGroupData[{
+Cell[42305, 1199, 244, 5, 23, "ExampleSection",ExpressionUUID->"3cdf4e37-7ef8-4693-ac3d-7f3cc1ec7fa8",
+ CellID->1659059769],
+Cell[42552, 1206, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"f5b3b3b9-b55d-4405-a3ef-2d93d8cc3971",
+ CellID->889864935],
+Cell[42801, 1213, 246, 5, 22, "ExampleSubsection",ExpressionUUID->"b0b637bd-899e-48a2-9420-06e10ee6a686",
+ CellID->883844837]
+}, Open  ]],
+Cell[43062, 1221, 248, 5, 35, "ExampleSection",ExpressionUUID->"9e014c01-a2bb-468b-8721-f22f6aa4040e",
+ CellID->635789160],
+Cell[43313, 1228, 259, 5, 23, "ExampleSection",ExpressionUUID->"c4759f82-192d-4032-b1ed-5b28f3f35033",
+ CellID->1977268295],
+Cell[43575, 1235, 252, 5, 23, "ExampleSection",ExpressionUUID->"58d056a5-485a-4595-8a94-9e8cb17f4f13",
+ CellID->1786280387],
+Cell[43830, 1242, 256, 5, 23, "ExampleSection",ExpressionUUID->"ddbbd970-b519-4042-bb37-37fc3ab47958",
+ CellID->193079249],
+Cell[44089, 1249, 249, 5, 23, "ExampleSection",ExpressionUUID->"c0d0ce3d-a16d-4683-8d47-a2fcb51c6274",
+ CellID->235147326]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44375, 1259, 110, 1, 72, "MetadataSection",ExpressionUUID->"d7e05199-9bbd-435a-92a9-615eb8d512a9",
+ CellID->751197602],
+Cell[44488, 1262, 595, 14, 26, "History",ExpressionUUID->"f6f32d03-8314-4695-9650-f83c39fc5ea2",
+ CellID->321736101],
+Cell[CellGroupData[{
+Cell[45108, 1280, 483, 13, 21, "CategorizationSection",ExpressionUUID->"d38c3096-2654-4469-b4d8-fcb67e20f06f",
+ CellID->54826361],
+Cell[45594, 1295, 134, 2, 35, "Categorization",ExpressionUUID->"71c416db-c1c5-4f1d-a79e-1c5f1f093337",
+ CellID->196164764],
+Cell[45731, 1299, 133, 2, 35, "Categorization",ExpressionUUID->"719bf217-6260-4777-a560-28676b58cbf4",
+ CellID->553790403],
+Cell[45867, 1303, 130, 2, 35, "Categorization",ExpressionUUID->"b73761fa-2cce-4e6a-8673-cb47ee5f6274",
+ CellID->361177123],
+Cell[46000, 1307, 149, 2, 35, "Categorization",ExpressionUUID->"5aee3490-0aee-4b40-a968-88961a51fd35",
+ CellID->1515119839]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46186, 1314, 111, 1, 31, "KeywordsSection",ExpressionUUID->"b13509c6-e888-414b-9b2b-cf0e92294c4c",
+ CellID->1905531594],
+Cell[46300, 1317, 99, 1, 21, "Keywords",ExpressionUUID->"3e5c5416-b61e-44a6-b0c2-d180a10a224e",
+ CellID->845872647]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46436, 1323, 119, 1, 31, "TemplatesSection",ExpressionUUID->"56848f82-fbe9-496d-9e27-86aae4e22d73",
+ CellID->239834989],
+Cell[46558, 1326, 147, 2, 70, "Template",ExpressionUUID->"29229c84-82d0-4ca5-8fd4-cafd5773ed76",
+ CellID->79854704],
+Cell[46708, 1330, 138, 2, 70, "Template",ExpressionUUID->"8967563d-f1b8-4c91-87cf-bdab7516862a",
+ CellID->2088214400],
+Cell[46849, 1334, 135, 2, 70, "Template",ExpressionUUID->"fd6a5899-e6e4-4f5c-a8dc-77db5b2f3288",
+ CellID->294177879],
+Cell[46987, 1338, 137, 2, 70, "Template",ExpressionUUID->"38af02ec-e372-49c6-a3e8-45cb60c05ba0",
+ CellID->740256959]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
